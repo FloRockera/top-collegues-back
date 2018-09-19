@@ -8,13 +8,13 @@ import dev.top.entities.Collegue;
 public interface Converters {
 
 	Converter<Collegue, CollegueView> COLLEGUE_TO_COLLEGUE_VIEW = source -> {
-		CollegueView collegueWeb = new CollegueView();
+		CollegueView collegueView = new CollegueView();
 
-		collegueWeb.setPseudo(source.getPseudo());
-		collegueWeb.setScore(source.getScore());
-		collegueWeb.setPhoto(source.getPhoto());
+		collegueView.setPseudo(source.getPseudo());
+		collegueView.setScore(source.getScore());
+		collegueView.setPhoto(source.getPhoto());
 
-		return collegueWeb;
+		return collegueView;
 	};
 
 	Converter<CollegueView, Collegue> COLLEGUE_VIEW_TO_COLLEGUE = source -> {

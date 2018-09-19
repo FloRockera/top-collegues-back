@@ -20,7 +20,7 @@ import dev.top.services.CollegueService;
 
 @CrossOrigin
 @RestController()
-@RequestMapping("/collegues")
+@RequestMapping("/accueil")
 public class CollegueCtrl {
 
 	private CollegueService collegueService;

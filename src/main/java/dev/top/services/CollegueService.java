@@ -35,7 +35,7 @@ public class CollegueService {
 	public Collegue modifierScore(String pseudo, Avis avisUtilisateur)
 			throws ServiceException, PseudoInvalideException {
 
-		return this.collRepo.findByPseudo(pseudo + "dddd").map(collegueTrouve -> {
+		return this.collRepo.findByPseudo(pseudo).map(collegueTrouve -> {
 
 			if (Avis.AIMER.equals(avisUtilisateur)) {
 				collegueTrouve.setScore(collegueTrouve.getScore() + 10);
