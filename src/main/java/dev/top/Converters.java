@@ -2,13 +2,13 @@ package dev.top;
 
 import org.springframework.core.convert.converter.Converter;
 
+import dev.top.controller.views.CollegueView;
 import dev.top.entities.Collegue;
-import dev.top.entities.CollegueWeb;
 
-public class Converters {
+public interface Converters {
 
-	public static Converter<Collegue, CollegueWeb> converterCollegueToCollegueWeb = source -> {
-		CollegueWeb collegueWeb = new CollegueWeb();
+	Converter<Collegue, CollegueView> COLLEGUE_TO_COLLEGUE_VIEW = source -> {
+		CollegueView collegueWeb = new CollegueView();
 
 		collegueWeb.setPseudo(source.getPseudo());
 		collegueWeb.setScore(source.getScore());
@@ -17,7 +17,7 @@ public class Converters {
 		return collegueWeb;
 	};
 
-	public static Converter<CollegueWeb, Collegue> converterCollegueWebToCollegue = source -> {
+	Converter<CollegueView, Collegue> COLLEGUE_VIEW_TO_COLLEGUE = source -> {
 		Collegue collRepo = new Collegue();
 
 		collRepo.setPseudo(source.getPseudo());

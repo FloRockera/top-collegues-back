@@ -1,6 +1,6 @@
-package dev.top.entities;
+package dev.top.controller.views;
 
-public class CollegueWeb {
+public class CollegueView {
 
 	// champs
 	private String pseudo;
@@ -10,14 +10,14 @@ public class CollegueWeb {
 	private String photo;
 
 	// constructeurs
-	public CollegueWeb(String pseudo, Integer score, String photo) {
+	public CollegueView(String pseudo, Integer score, String photo) {
 		super();
 		this.pseudo = pseudo;
 		this.score = score;
 		this.photo = photo;
 	}
 
-	public CollegueWeb() {
+	public CollegueView() {
 		super();
 	}
 

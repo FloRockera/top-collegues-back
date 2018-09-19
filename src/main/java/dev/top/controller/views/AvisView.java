@@ -1,4 +1,6 @@
-package dev.top.entities;
+package dev.top.controller.views;
+
+import dev.top.entities.Avis;
 
 public class AvisView {
 
